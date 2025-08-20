@@ -88,4 +88,6 @@
         @import "tailwindcss";
         @plugin "daisyui";
 
-        
+- https://daisyui.com/components/navbar/ -> link for document of daiyui
+
+
