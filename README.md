@@ -10,3 +10,16 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+Git pushusing SSH key
+- git init
+- Clone your repo using SSH
+git clone git@github.com:Sindhu-Chinnaswamy31/devTinder-web.git
+
+if already cloned via HTTPS, change remote to SSH:
+
+git remote set-url origin git@github.com:Sindhu-Chinnaswamy31/devTinder-web.git
+- git remote add origin git@github.com:Sindhu-Chinnaswamy31/devTinder-web.git
+- git push -u origin main

@@ -90,4 +90,6 @@
 
 - https://daisyui.com/components/navbar/ -> link for document of daiyui
 
-
+- Create a NarBar.jsx separate component file
+- npm i react-router-dom -> to craete different path in react
+- <Outlet /> //Renders the matching child route of a parent route or nothing if no child route matches.
