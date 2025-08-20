@@ -76,3 +76,16 @@
         daisyui: { themes: false },
       }
 
+      - postcss.config.js
+
+      import tailwindcss from "@tailwindcss/postcss";
+
+      export default {
+        plugins: [tailwindcss()],
+      };
+
+      - index.css
+        @import "tailwindcss";
+        @plugin "daisyui";
+
+        
