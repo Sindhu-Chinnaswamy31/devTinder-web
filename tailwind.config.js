@@ -8,6 +8,11 @@ export default {
     extend: {},
   },
   plugins: {
-    daisyui: {}, // ✅ Tailwind v4 style plugin registration
+    daisyui: {
+      themes: [
+        'dark',
+        'cupcake',
+      ]
+    }, // ✅ Tailwind v4 style plugin registration
   },
 };

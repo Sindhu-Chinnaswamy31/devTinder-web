@@ -93,3 +93,7 @@
 - Create a NarBar.jsx separate component file
 - npm i react-router-dom -> to craete different path in react
 - <Outlet /> //Renders the matching child route of a parent route or nothing if no child route matches.
+- axios -> api to get API call
+$ npm install axios
+- To aovid cros error we need to install express cros middleware (backend code)
+ npm i cors 
