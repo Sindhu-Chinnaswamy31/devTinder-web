@@ -97,3 +97,13 @@
 $ npm install axios
 - To aovid cros error we need to install express cros middleware (backend code)
  npm i cors 
+
+- instal redux tool kit
+  npm install @reduxjs/toolkit react-redux -> it is two library
+
+  - Store consist of slices and they can be different type of slice we can make.
+
+- instal @reduxjs/toolkit and react-redux
+- create a configureStore => Provider => createSlice => add reducer to store
+
+
