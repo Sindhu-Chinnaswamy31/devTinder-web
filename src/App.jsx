@@ -8,6 +8,7 @@ import Requests from './components/Requests';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { Provider } from "react-redux";
 import appStore from './utils/appStore';
+import Premium from './components/Premium';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/setting" element={<Setting />} />
                 <Route path="/connections" element={<Connections />} />
                 <Route path="/requests" element={<Requests />} />
+                <Route path="/premium" element={<Premium />} />
             </Route>
           </Routes>
         </BrowserRouter>
