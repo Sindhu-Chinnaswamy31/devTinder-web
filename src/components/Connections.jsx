@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
 import { Link } from "react-router-dom";
 const Connections = () => {
-    const connections = useSelector((state) => state.connections); 
+    const connections = useSelector((store) => store.connections); 
     console.log(connections);
     const dispatch = useDispatch();
     const fetchConnections = async () => {
@@ -50,13 +50,13 @@ const Connections = () => {
 
                                 {/* Details on right */}
                                 <div className="flex flex-col">
-                                <p className="text-lg font-bold">{connection.fromUserId.firstName} {connection.fromUserId.lastName}</p>
-                                <p className="text-md">{connection.fromUserId.phoneNumber}</p>
-                                <p className="text-md">{connection.fromUserId.age} - {connection.fromUserId.gender}</p>
-                                <p className="text-md">{connection.fromUserId.location}</p>
-                                <p className="text-md italic">{connection.fromUserId.bio}</p>
+                                <p className="text-lg font-bold">{connection.firstName} {connection.lastName}</p>
+                                <p className="text-md">{connection.phoneNumber}</p>
+                                <p className="text-md">{connection.age} - {connection.gender}</p>
+                                <p className="text-md">{connection.location}</p>
+                                <p className="text-md italic">{connection.bio}</p>
                                 </div>
-                               <Link to={`/chat/${connection.fromUserId._id}`} className="btn btn-primary mx-45">Chat</Link>
+                               <Link to={`/chat/${connection._id}`} className="btn btn-primary mx-45">Chat</Link>
                             </div>
                             </div>
                     </div>

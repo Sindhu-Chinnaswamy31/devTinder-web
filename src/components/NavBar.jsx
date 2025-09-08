@@ -28,6 +28,7 @@ const NavBar = () => {
           </div>
           {user && (
             <div className="flex gap-2">
+              <div className="form-control">Welcome, {user.firstName}</div>
               <div className="dropdown dropdown-end mx-6">
                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">

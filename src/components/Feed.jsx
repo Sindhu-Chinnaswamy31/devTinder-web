@@ -14,23 +14,31 @@ const Feed = () => {
         if(!feed){
             return;
         }
-        const res = await axios.get(BASE_URL + "/feed", {
-            withCredentials: true   
-        })
-        dispatch(addFeed(res.data));
+        try{
+            const res = await axios.get(BASE_URL + "/feed", {
+                withCredentials: true   
+            })
+            dispatch(addFeed(res.data));
+        }catch(err){
+            console.log(err);
+        }
     }
 
     useEffect(() => {
         getFeed();
     }, []);
 
-    if(feed.length == 0){
-        return (
-            <div className="flex justify-center items-center h-screen">
-                <h1 className="flex justify-center text-2xl">No feed</h1>
-            </div>
-        )
-    }
+    if (!feed) return;
+   const feedArray = Array.isArray(feed) ? feed : feed?.feed;
+
+// Conditional rendering
+if (!feedArray || feedArray.length === 0) {
+    return (
+        <div className="flex justify-center items-center h-screen">
+            <h1 className="flex justify-center text-2xl">No feed</h1>
+        </div>
+    );
+}
 
     return (
         feed && (
